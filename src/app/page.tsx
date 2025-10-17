@@ -49,7 +49,7 @@ export default function SiteRodrigoAnjos() {
 
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="#linkedin" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/anjosit/" target="_blank" rel="noreferrer">
                   <Linkedin className="mr-2 h-5 w-5"/> LinkedIn
                 </a>
               </Button>
@@ -310,11 +310,13 @@ export default function SiteRodrigoAnjos() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="space-y-3 text-slate-300">
               <p>Vamos conversar sobre integração SAP, portais ou migração S/4HANA.</p>
-              <p><strong>E-mail:</strong> contato@anjosit.com.br</p>
-              <p><strong>Site:</strong> www.anjosit.com.br</p>
-              <div className="flex flex-wrap gap-3 pt-2">
+			  <p><strong>E-mail:</strong><a href="mailto:rodrigo.anjos@anjosit.com.br?subject=Contato%20via%20site&body=Olá%20Rodrigo," className="text-sky-400 hover:underline">rodrigo.anjos@anjosit.com.br</a></p>
+              <p><strong>Site:</strong> <a href="https://www.anjosit.com.br" className="text-sky-400 hover:underline" target="_blank" rel="noreferrer">www.anjosit.com.br</a></p>
+              <p><strong>WhatsApp:</strong>{" "}<a href="https://wa.me/5511940069410" className="text-sky-400 hover:underline" target="_blank" rel="noreferrer">(11) 94006-9410 </a></p>
+			  <p><strong>Telefone:</strong>{" "}<a href="tel:+5511940069410" className="text-sky-400 hover:underline">(11) 94006-9410</a></p>
+			  <div className="flex flex-wrap gap-3 pt-2">
                 <Button asChild variant="outline">
-                  <a href="#linkedin" target="_blank" rel="noreferrer"><Linkedin className="mr-2 h-4 w-4"/>LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/anjosit/" target="_blank" rel="noreferrer"><Linkedin className="mr-2 h-4 w-4"/>LinkedIn</a>
                 </Button>
               </div>
             </div>
