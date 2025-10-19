@@ -159,7 +159,7 @@ export default function SiteRodrigoAnjos() {
                 <ul className="list-disc pl-5">
                   <li>Padronização MM, PP, QM e CO</li>
                   <li>Dashboards Fiori e automações ABAP</li>
-                  <li>Arquitetura <strong>S/4HANA Ready</strong></li>
+                  <li>Arquitetura <strong>S/4HANA</strong></li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800"><Leaf className="mr-1 h-3 w-3"/> ESG</Badge>
@@ -310,7 +310,7 @@ export default function SiteRodrigoAnjos() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="space-y-3 text-slate-300">
               <p>Vamos conversar sobre integração SAP, portais ou migração S/4HANA.</p>
-			  <p><strong>E-mail:</strong><a href="mailto:rodrigo.anjos@anjosit.com.br?subject=Contato%20via%20site&body=Olá%20Rodrigo," className="text-sky-400 hover:underline">rodrigo.anjos@anjosit.com.br</a></p>
+			  <p><strong>E-mail: </strong><a href="mailto:rodrigo.anjos@anjosit.com.br?subject=Contato%20via%20site&body=Olá%20Rodrigo," className="text-sky-400 hover:underline">rodrigo.anjos@anjosit.com.br</a></p>
               <p><strong>Site:</strong> <a href="https://www.anjosit.com.br" className="text-sky-400 hover:underline" target="_blank" rel="noreferrer">www.anjosit.com.br</a></p>
               <p><strong>WhatsApp:</strong>{" "}<a href="https://wa.me/5511940069410" className="text-sky-400 hover:underline" target="_blank" rel="noreferrer">(11) 94006-9410 </a></p>
 			  <p><strong>Telefone:</strong>{" "}<a href="tel:+5511940069410" className="text-sky-400 hover:underline">(11) 94006-9410</a></p>
