@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,8 +12,8 @@ export default function SiteRodrigoAnjos() {
       <header className="sticky top-0 z-40 border-b border-sky-100 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a href="#top" className="flex items-center gap-3 font-semibold tracking-tight">
-            <span className="inline-flex h-8 w-8 overflow-hidden rounded-xl ring-2 ring-sky-200">
-              <img src="/rodrigo.jpg" alt="Rodrigo Anjos" className="h-full w-full object-cover"/>
+            <span className="relative inline-flex h-8 w-8 overflow-hidden rounded-xl ring-2 ring-sky-200">
+              <Image src="/rodrigo.jpg" alt="Rodrigo Anjos" fill className="object-cover" sizes="32px"/>
             </span>
             <span>Anjos IT Solutions</span>
           </a>
@@ -60,10 +61,13 @@ export default function SiteRodrigoAnjos() {
           </div>
 			<div className="flex items-center justify-center md:justify-end">
 			  <div className="relative h-56 w-56 overflow-hidden rounded-full shadow-lg md:h-72 md:w-72 ring-4 ring-sky-200">
-				<img
+				<Image
 				  src="/rodrigo.jpg"
 				  alt="Foto de perfil"
-				  className="h-full w-full object-cover"
+				  fill
+				  className="object-cover"
+				  priority
+                  sizes="(min-width: 768px) 18rem, 14rem"
 				/>
 			  </div>
 			</div>
