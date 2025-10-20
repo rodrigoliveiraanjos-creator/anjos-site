@@ -12,8 +12,8 @@ export default function SiteRodrigoAnjos() {
       <header className="sticky top-0 z-40 border-b border-sky-100 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a href="#top" className="flex items-center gap-3 font-semibold tracking-tight">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-sky-700 text-white">
-              RA
+            <span className="relative inline-flex h-8 w-8 overflow-hidden rounded-xl ring-2 ring-sky-200">
+              <Image src="/rodrigo.jpg" alt="Rodrigo Anjos" fill className="object-cover" sizes="32px" priority/>
             </span>
             <span>Anjos IT Solutions</span>
           </a>
