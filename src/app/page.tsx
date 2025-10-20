@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Linkedin, Mail, Building2, Rocket, Factory, Spline, ShieldCheck, Leaf, BarChart3 } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, Building2, Rocket, Factory, ShieldCheck, Leaf, BarChart3 } from "lucide-react";
 
 export default function SiteRodrigoAnjos() {
   return (
@@ -21,7 +21,6 @@ export default function SiteRodrigoAnjos() {
             <a href="#sobre" className="hover:text-slate-600">Sobre</a>
             <a href="#empresa" className="hover:text-slate-600">Empresa</a>
             <a href="#projetos" className="hover:text-slate-600">Projetos</a>
-            <a href="#entregaveis" className="hover:text-slate-600">Entregáveis 2025</a>
             <a href="#contato" className="hover:text-slate-600">Contato</a>
           </nav>
           <div className="flex items-center gap-2">
@@ -44,8 +43,10 @@ export default function SiteRodrigoAnjos() {
               Olá, eu sou <span className="text-slate-900">Rodrigo Anjos</span>
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Especialista em <strong>Arquitetura de Integrações SAP</strong> e fundador da <strong>Anjos IT Solutions</strong>.
-              Conectamos SAP a sistemas não-SAP com eficiência, segurança e governança — preparando ambientes para o <strong>S/4HANA</strong>.
+              Sou especialista em <strong>Arquitetura de Integrações SAP</strong> e fundador da <strong>Anjos IT Solutions</strong>,
+              guiando empresas em jornadas de transformação digital com foco em clean core, compliance e escalabilidade.
+              Conectamos SAP a plataformas de e-commerce, logística, ESG e analytics por meio de APIs standard e governança robusta,
+              preparando todo o ecossistema para o <strong>S/4HANA</strong> e acelerando resultados dos parceiros.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild size="lg" className="shadow bg-sky-700 hover:bg-sky-800">
@@ -81,7 +82,12 @@ export default function SiteRodrigoAnjos() {
             <Rocket className="h-6 w-6 text-sky-700"/>
             <h2 className="text-2xl font-bold">Sobre mim</h2>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <p className="mb-10 max-w-4xl text-slate-600 leading-relaxed">
+            Há mais de 16 anos atuo em programas SAP complexos, conduzindo integrações, rollouts e sustentação em indústrias de grande porte.
+            Lidero squads multifuncionais, destravo decisões executivas com dados e desenho modelos operacionais que mantêm o core SAP enxuto,
+            sem perder a agilidade necessária para novos negócios e parceiros.
+          </p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             <Card className="border-sky-100">
               <CardHeader>
                 <CardTitle>Experiência</CardTitle>
@@ -89,6 +95,8 @@ export default function SiteRodrigoAnjos() {
               <CardContent className="space-y-2 text-slate-600">
                 <p><strong>16+ anos</strong> em SAP (Consultor, Arquiteto de Integrações, Gestor de Produto).</p>
                 <p>Foco em integrações <strong>SAP ECC/S4</strong>, ABAP, Fiori e ecossistema (PI/PO, CPI, BTP).</p>
+                <p>Condução de programas de rollout, migração e sustentação para indústrias nacionais e multinacionais,
+                  liderando squads multifuncionais e parcerias near/onshore.</p>
               </CardContent>
             </Card>
             <Card className="border-sky-100">
@@ -98,6 +106,7 @@ export default function SiteRodrigoAnjos() {
               <CardContent className="space-y-2 text-slate-600">
                 <p><strong>Bacharel em Análise de Sistemas</strong> – IBTA</p>
                 <p><strong>MBA em Gestão de Negócios</strong> – USP</p>
+                <p>Especializações contínuas em arquitetura clean core, integração via APIs, LGPD e governança de dados.</p>
               </CardContent>
             </Card>
             <Card className="border-sky-100">
@@ -106,6 +115,19 @@ export default function SiteRodrigoAnjos() {
               </CardHeader>
               <CardContent className="space-y-2 text-slate-600">
                 <p>Entregar integrações que geram <strong>valor de negócio</strong>, com governança, performance e escalabilidade.</p>
+                <p>Garantir que cada projeto tenha objetivos claros, indicadores acompanhados e plano de continuidade pós-go-live,
+                  conectando TI e áreas de negócio para acelerar ROI.</p>
+              </CardContent>
+            </Card>
+            <Card className="border-sky-100">
+              <CardHeader>
+                <CardTitle>Modelo de parceria</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-slate-600">
+                <p>Atuação colaborativa com consultorias e software houses, assumindo a frente técnica ou estratégica conforme
+                  a necessidade do cliente final.</p>
+                <p>Ofereço transparência em contratos (SLA, OLA e planos de comunicação), compartilhamento de conhecimento com as equipes parceiras
+                  e coautoria em propostas para ampliar oportunidades comerciais.</p>
               </CardContent>
             </Card>
           </div>
@@ -123,7 +145,7 @@ export default function SiteRodrigoAnjos() {
             <Card className="border-sky-100">
               <CardHeader><CardTitle>O que fazemos</CardTitle></CardHeader>
               <CardContent className="text-slate-600">
-                Integrações SAP (PI/PO, CPI, BTP, APIs), ABAP/4 e Fiori; consultoria funcional SD, MM, FI, CO, PP e QM; portais e cockpits.
+                Integrações SAP (PI/PO, CPI, BTP, APIs), ABAP/4 e Fiori; consultoria funcional SD (Vendas e Distribuição), MM (Materiais e Estoques), FI (Finanças), CO (Controladoria), PP (Planejamento da Produção) e QM (Gestão da Qualidade); portais e cockpits.
               </CardContent>
             </Card>
             <Card className="border-sky-100">
@@ -161,12 +183,7 @@ export default function SiteRodrigoAnjos() {
                 <CardTitle>Bioplanta – Economia Circular (Agroindustrial)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Integração SAP ECC com plantas de biogás em <strong>duas unidades no PR e MG</strong>, modelo replicável para <strong>30+ rollouts</strong>.</p>
-                <ul className="list-disc pl-5">
-                  <li>Padronização MM, PP, QM e CO</li>
-                  <li>Dashboards Fiori e automações ABAP</li>
-                  <li>Arquitetura <strong>S/4HANA</strong></li>
-                </ul>
+                <p>Em 2025, levamos o modelo Bioplanta a novas unidades, integrando operações de biogás ao SAP para assegurar rastreabilidade de produção, estoques e indicadores ESG em escala nacional.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800"><Leaf className="mr-1 h-3 w-3"/> ESG</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Agroindustrial</Badge>
@@ -180,12 +197,7 @@ export default function SiteRodrigoAnjos() {
                 <CardTitle>Integração EDI Avançada (Automotivo / Manufatura)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Cockpit para <strong>programas de remessa (RND001)</strong> com validações automáticas e status por farol.</p>
-                <ul className="list-disc pl-5">
-                  <li>Tabela de período firme e tabelas Z</li>
-                  <li>Comparação SAP x Cliente (SD/PI)</li>
-                  <li>Governança e rastreabilidade</li>
-                </ul>
+                <p>Para 2025, consolidamos um cockpit de remessas que mantém montadoras e fornecedores sincronizados, com visão única de pedidos, entregas e alertas preventivos de ruptura.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">Automotivo</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Manufatura</Badge>
@@ -197,7 +209,7 @@ export default function SiteRodrigoAnjos() {
                 <CardTitle>Portal de Cliente e Fornecedor (B2B)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Gestão de credenciais com expiração, notificações e i18n (PT/EN/ES), integração via SAP PI e envio por SCOT/SOST.</p>
+                <p>O roadmap 2025 amplia o portal B2B com autosserviço seguro, onboarding guiado e notificações inteligentes para fortalecer a colaboração com clientes e fornecedores.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">B2B</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Segurança</Badge>
@@ -209,19 +221,32 @@ export default function SiteRodrigoAnjos() {
                 <CardTitle>Portal de Etiquetas Zebradas (Manufatura / Metalurgia)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Portal <strong>Java</strong> integrado ao SAP para impressão ZPL com logs em tempo real; suporte a lote, modelo e unidade.</p>
+                <p>Em 2025, evoluímos o portal de etiquetas para suportar expedição 24/7, com impressão centralizada, rastreabilidade total e governança de layouts por planta.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">Manufatura</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Metalurgia</Badge>
                 </div>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-lg transition-shadow md:col-span-2 border-sky-100">
+            <Card className="hover:shadow-lg transition-shadow border-sky-100">
+              <CardHeader>
+                <CardTitle>Integração Clean Core com Uappi (Varejo)</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3 text-slate-600">
+                <p>Projeto 2025: conectamos o e-commerce Uappi ao SAP mantendo o core padrão; clientes, materiais e pedidos fluem por APIs oficiais, garantindo visão única até o faturamento.</p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge className="bg-sky-100 text-sky-800">E-commerce</Badge>
+                  <Badge className="bg-sky-100 text-sky-800">Clean Core</Badge>
+                  <Badge className="bg-sky-100 text-sky-800">SAP APIs</Badge>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-shadow border-sky-100">
               <CardHeader>
                 <CardTitle>Regime de Cotização (Compras / MM & CO)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Distribuição percentual automática entre fornecedores, ajustes de tabelas, cálculos e validações de preços.</p>
+                <p>Na agenda 2025, digitalizamos o rateio de compras para acelerar negociações, automatizar cálculos e dar transparência às margens compartilhadas com parceiros.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">Compras & Suprimentos</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Controladoria</Badge>
@@ -232,58 +257,8 @@ export default function SiteRodrigoAnjos() {
         </div>
       </section>
 
-      {/* ENTREGAVEIS 2025 */}
-      <section id="entregaveis" className="border-t bg-sky-50/60">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <div className="mb-8 flex items-center gap-3">
-            <Spline className="h-6 w-6 text-sky-700"/>
-            <h2 className="text-2xl font-bold">Entregáveis de 2025</h2>
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <Card className="border-sky-100">
-              <CardHeader><CardTitle>Rollouts & Integrações</CardTitle></CardHeader>
-              <CardContent className="text-slate-600">
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Expansão do modelo Bioplanta para <strong>2 filiais</strong></li>
-                  <li>Padronização de objetos e fluxos (<em>S/4HANA</em>)</li>
-                  <li>APIs REST/SOAP para parceiros e plantas</li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="border-sky-100">
-              <CardHeader><CardTitle>Automação & Portais</CardTitle></CardHeader>
-              <CardContent className="text-slate-600">
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Evolução do Portal de Etiquetas com monitoramento</li>
-                  <li>Novas regras no Portal de Cliente/Fornecedor</li>
-                  <li>Dashboards Fiori de performance e ESG</li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="border-sky-100">
-              <CardHeader><CardTitle>Sustentação</CardTitle></CardHeader>
-              <CardContent className="text-slate-600">
-                <ul className="list-disc pl-5 space-y-1">
-                  <li><strong>+2.000h</strong> de suporte <strong>ABAP/4</strong></li>
-                  <li><strong>+800h</strong> de suporte funcional <strong>SD/MM/FI/CO/PP/QM</strong></li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="border-sky-100">
-              <CardHeader><CardTitle>Governança & Compliance</CardTitle></CardHeader>
-              <CardContent className="text-slate-600">
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Rastreabilidade ponta a ponta dos processos</li>
-                  <li>Melhores práticas SAP e controles de qualidade</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* MÉTRICAS */}
-      <section className="border-t bg-white">
+      <section className="border-t bg-sky-50/60">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <div className="mb-8 flex items-center gap-3">
             <BarChart3 className="h-6 w-6 text-sky-700"/>
@@ -302,12 +277,12 @@ export default function SiteRodrigoAnjos() {
               </CardHeader>
               <CardContent className="text-slate-600">Suporte técnico ABAP/4</CardContent>
             </Card>
-            <Card className="text-center border-sky-100">
-              <CardHeader>
-                <CardTitle className="text-3xl font-extrabold text-sky-800">2000h+</CardTitle>
-              </CardHeader>
-              <CardContent className="text-slate-600">Suporte funcional SD/MM/FI/CO/PP/QM</CardContent>
-            </Card>
+          <Card className="text-center border-sky-100">
+            <CardHeader>
+              <CardTitle className="text-3xl font-extrabold text-sky-800">2000h+</CardTitle>
+            </CardHeader>
+            <CardContent className="text-slate-600">Suporte funcional SD (Vendas e Distribuição), MM (Materiais e Estoques), FI (Finanças), CO (Controladoria), PP (Planejamento da Produção) e QM (Gestão da Qualidade)</CardContent>
+          </Card>
             <Card className="text-center border-sky-100">
               <CardHeader>
                 <CardTitle className="text-3xl font-extrabold text-sky-800">1.000h+</CardTitle>
