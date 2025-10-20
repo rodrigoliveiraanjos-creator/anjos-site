@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Download, Linkedin, Github, Mail, Building2, Rocket, Factory, Spline, ShieldCheck, Leaf } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, Building2, Rocket, Factory, Spline, ShieldCheck, Leaf, BarChart3 } from "lucide-react";
 
 export default function SiteRodrigoAnjos() {
   return (
@@ -11,7 +11,9 @@ export default function SiteRodrigoAnjos() {
       <header className="sticky top-0 z-40 border-b border-sky-100 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a href="#top" className="flex items-center gap-3 font-semibold tracking-tight">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-sky-700 text-white">RA</span>
+            <span className="inline-flex h-8 w-8 overflow-hidden rounded-xl ring-2 ring-sky-200">
+              <img src="/rodrigo.jpg" alt="Rodrigo Anjos" className="h-full w-full object-cover"/>
+            </span>
             <span>Anjos IT Solutions</span>
           </a>
           <nav className="hidden gap-6 md:flex">
@@ -238,8 +240,8 @@ export default function SiteRodrigoAnjos() {
               <CardHeader><CardTitle>Rollouts & Integrações</CardTitle></CardHeader>
               <CardContent className="text-slate-600">
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Expansão do modelo Bioplanta para <strong>30+ unidades</strong></li>
-                  <li>Padronização de objetos e fluxos (<em>S/4HANA Ready</em>)</li>
+                  <li>Expansão do modelo Bioplanta para <strong>2 filiais</strong></li>
+                  <li>Padronização de objetos e fluxos (<em>S/4HANA</em>)</li>
                   <li>APIs REST/SOAP para parceiros e plantas</li>
                 </ul>
               </CardContent>
@@ -278,25 +280,37 @@ export default function SiteRodrigoAnjos() {
 
       {/* MÉTRICAS */}
       <section className="border-t bg-white">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-16 md:grid-cols-3">
-          <Card className="text-center border-sky-100">
-            <CardHeader>
-              <CardTitle className="text-3xl font-extrabold text-sky-800">30+</CardTitle>
-            </CardHeader>
-            <CardContent className="text-slate-600">Rollouts planejados (modelo Bioplanta)</CardContent>
-          </Card>
-          <Card className="text-center border-sky-100">
-            <CardHeader>
-              <CardTitle className="text-3xl font-extrabold text-sky-800">2.000h+</CardTitle>
-            </CardHeader>
-            <CardContent className="text-slate-600">Suporte técnico ABAP/4</CardContent>
-          </Card>
-          <Card className="text-center border-sky-100">
-            <CardHeader>
-              <CardTitle className="text-3xl font-extrabold text-sky-800">800h+</CardTitle>
-            </CardHeader>
-            <CardContent className="text-slate-600">Suporte funcional SD/MM/FI/CO/PP/QM</CardContent>
-          </Card>
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <div className="mb-8 flex items-center gap-3">
+            <BarChart3 className="h-6 w-6 text-sky-700"/>
+            <h2 className="text-2xl font-bold">Métricas de entrega</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <Card className="text-center border-sky-100">
+              <CardHeader>
+                <CardTitle className="text-3xl font-extrabold text-sky-800">30+</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600">Projetos executos com sucessos</CardContent>
+            </Card>
+            <Card className="text-center border-sky-100">
+              <CardHeader>
+                <CardTitle className="text-3xl font-extrabold text-sky-800">3.000h+</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600">Suporte técnico ABAP/4</CardContent>
+            </Card>
+            <Card className="text-center border-sky-100">
+              <CardHeader>
+                <CardTitle className="text-3xl font-extrabold text-sky-800">2000h+</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600">Suporte funcional SD/MM/FI/CO/PP/QM</CardContent>
+            </Card>
+            <Card className="text-center border-sky-100">
+              <CardHeader>
+                <CardTitle className="text-3xl font-extrabold text-sky-800">1.000h+</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600">Desenvolvimento em outras linguagens</CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
