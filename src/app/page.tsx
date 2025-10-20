@@ -1,324 +1,384 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Linkedin, Mail, Building2, Rocket, Factory, ShieldCheck, Leaf, BarChart3 } from "lucide-react";
+import {
+  ArrowRight,
+  Mail,
+  Phone,
+  ShieldCheck,
+  Users,
+  BarChart3,
+  Building2,
+  MoveRight,
+} from "lucide-react";
 
-export default function SiteRodrigoAnjos() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white text-slate-900">
+    <div className="min-h-screen bg-slate-950 text-slate-100">
       {/* NAVBAR */}
-      <header className="sticky top-0 z-40 border-b border-sky-100 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <a href="#top" className="flex items-center gap-3 font-semibold tracking-tight">
-            <span className="relative inline-flex h-8 w-8 overflow-hidden rounded-xl ring-2 ring-sky-200">
-              <Image src="/rodrigo.jpg" alt="Rodrigo Anjos" fill className="object-cover" sizes="32px" priority/>
-            </span>
-            <span>Anjos IT Solutions</span>
-          </a>
-          <nav className="hidden gap-6 md:flex">
-            <a href="#sobre" className="hover:text-slate-600">Sobre</a>
-            <a href="#empresa" className="hover:text-slate-600">Empresa</a>
-            <a href="#projetos" className="hover:text-slate-600">Projetos</a>
-            <a href="#contato" className="hover:text-slate-600">Contato</a>
-          </nav>
-          <div className="flex items-center gap-2">
-            <Button asChild variant="outline" className="hidden md:inline-flex">
-              <a href="#contato"><Mail className="mr-2 h-4 w-4"/>Contato</a>
-            </Button>
-            <Button asChild className="inline-flex bg-sky-700 hover:bg-sky-800">
-              <a href="#projetos">Portfólio<ArrowRight className="ml-2 h-4 w-4"/></a>
+      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white">
+        <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4">
+          <div className="flex flex-1 items-center justify-start md:justify-start" />
+          <Link href="/" className="relative h-full w-48">
+            <Image
+              src="/anjos_transparente.png"
+              alt="Anjos IT Solutions"
+              fill
+              className="object-contain"
+              priority
+              sizes="(min-width: 768px) 12rem, 10rem"
+            />
+          </Link>
+          <div className="flex flex-1 items-center justify-end">
+            <Button asChild className="bg-sky-500 text-white hover:bg-sky-600">
+              <a href="#contato" className="whitespace-nowrap">
+                Começar projeto
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </Button>
           </div>
         </div>
       </header>
 
-      {/* HERO */}
-      <section id="top" className="relative">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-16 md:grid-cols-2 md:py-24">
-          <div className="flex flex-col justify-center">
-            <Badge className="w-fit bg-sky-100 text-sky-800">Apresentação Profissional</Badge>
-            <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
-              Olá, eu sou <span className="text-slate-900">Rodrigo Anjos</span>
-            </h1>
-            <p className="mt-4 text-lg text-slate-600">
-              Sou especialista em <strong>Arquitetura de Integrações SAP</strong> e fundador da <strong>Anjos IT Solutions</strong>,
-              guiando empresas em jornadas de transformação digital com foco em clean core, compliance e escalabilidade.
-              Conectamos SAP a plataformas de e-commerce, logística, ESG e analytics por meio de APIs standard e governança robusta,
-              preparando todo o ecossistema para o <strong>S/4HANA</strong> e acelerando resultados dos parceiros.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="shadow bg-sky-700 hover:bg-sky-800">
-
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="https://www.linkedin.com/in/anjosit/" target="_blank" rel="noreferrer">
-                  <Linkedin className="mr-2 h-5 w-5"/> LinkedIn
-                </a>
-              </Button>
-
-            </div>
-          </div>
-			<div className="flex items-center justify-center md:justify-end">
-			  <div className="relative h-56 w-56 overflow-hidden rounded-full shadow-lg md:h-72 md:w-72 ring-4 ring-sky-200">
-				<Image
-				  src="/rodrigo.jpg"
-				  alt="Foto de perfil"
-				  fill
-				  className="object-cover"
-				  priority
-                  sizes="(min-width: 768px) 18rem, 14rem"
-				/>
-			  </div>
-			</div>
-        </div>
-      </section>
-
-      {/* SOBRE MIM */}
-      <section id="sobre" className="border-t bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <div className="mb-8 flex items-center gap-3">
-            <Rocket className="h-6 w-6 text-sky-700"/>
-            <h2 className="text-2xl font-bold">Sobre mim</h2>
-          </div>
-          <p className="mb-10 max-w-4xl text-slate-600 leading-relaxed">
-            Há mais de 16 anos atuo em programas SAP complexos, conduzindo integrações, rollouts e sustentação em indústrias de grande porte.
-            Lidero squads multifuncionais, destravo decisões executivas com dados e desenho modelos operacionais que mantêm o core SAP enxuto,
-            sem perder a agilidade necessária para novos negócios e parceiros.
-          </p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="border-sky-100">
-              <CardHeader>
-                <CardTitle>Experiência</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 text-slate-600">
-                <p><strong>16+ anos</strong> em SAP (Consultor, Arquiteto de Integrações, Gestor de Produto).</p>
-                <p>Foco em integrações <strong>SAP ECC/S4</strong>, ABAP, Fiori e ecossistema (PI/PO, CPI, BTP).</p>
-                <p>Condução de programas de rollout, migração e sustentação para indústrias nacionais e multinacionais,
-                  liderando squads multifuncionais e parcerias near/onshore.</p>
-              </CardContent>
-            </Card>
-            <Card className="border-sky-100">
-              <CardHeader>
-                <CardTitle>Formação</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 text-slate-600">
-                <p><strong>Bacharel em Análise de Sistemas</strong> – IBTA</p>
-                <p><strong>MBA em Gestão de Negócios</strong> – USP</p>
-                <p>Especializações contínuas em arquitetura clean core, integração via APIs, LGPD e governança de dados.</p>
-              </CardContent>
-            </Card>
-            <Card className="border-sky-100">
-              <CardHeader>
-                <CardTitle>Missão</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 text-slate-600">
-                <p>Entregar integrações que geram <strong>valor de negócio</strong>, com governança, performance e escalabilidade.</p>
-                <p>Garantir que cada projeto tenha objetivos claros, indicadores acompanhados e plano de continuidade pós-go-live,
-                  conectando TI e áreas de negócio para acelerar ROI.</p>
-              </CardContent>
-            </Card>
-            <Card className="border-sky-100">
-              <CardHeader>
-                <CardTitle>Modelo de parceria</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 text-slate-600">
-                <p>Atuação colaborativa com consultorias e software houses, assumindo a frente técnica ou estratégica conforme
-                  a necessidade do cliente final.</p>
-                <p>Ofereço transparência em contratos (SLA, OLA e planos de comunicação), compartilhamento de conhecimento com as equipes parceiras
-                  e coautoria em propostas para ampliar oportunidades comerciais.</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* EMPRESA */}
-      <section id="empresa" className="border-t bg-sky-50/60">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <div className="mb-8 flex items-center gap-3">
-            <Building2 className="h-6 w-6 text-sky-700"/>
-            <h2 className="text-2xl font-bold">Anjos IT Solutions</h2>
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <Card className="border-sky-100">
-              <CardHeader><CardTitle>O que fazemos</CardTitle></CardHeader>
-              <CardContent className="text-slate-600">
-                Integrações SAP (PI/PO, CPI, BTP, APIs), ABAP/4 e Fiori; consultoria funcional SD (Vendas e Distribuição), MM (Materiais e Estoques), FI (Finanças), CO (Controladoria), PP (Planejamento da Produção) e QM (Gestão da Qualidade); portais e cockpits.
-              </CardContent>
-            </Card>
-            <Card className="border-sky-100">
-              <CardHeader><CardTitle>Diferencial</CardTitle></CardHeader>
-              <CardContent className="text-slate-600">
-                Arquitetura modular que fragmenta processos em tarefas menores, aumentando visibilidade, controle e velocidade de entrega.
-              </CardContent>
-            </Card>
-            <Card className="border-sky-100">
-              <CardHeader><CardTitle>Setores atendidos</CardTitle></CardHeader>
-              <CardContent className="text-slate-600 space-y-2">
-                <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-sky-100 text-sky-800">Agroindustrial</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Automotivo</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Manufatura / Metalurgia</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Energia</Badge>
-                </div>
-                <p className="text-sm text-slate-500">* Nomes de clientes são confidenciais; usamos apenas segmentos.</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* PROJETOS (segmentos, sem nomes) */}
-      <section id="projetos" className="border-t bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <div className="mb-8 flex items-center gap-3">
-            <Factory className="h-6 w-6 text-sky-700"/>
-            <h2 className="text-2xl font-bold">Projetos em destaque</h2>
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <Card className="hover:shadow-lg transition-shadow border-sky-100">
-              <CardHeader>
-                <CardTitle>Bioplanta – Economia Circular (Agroindustrial)</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-slate-600">
-                <p>Em 2025, levamos o modelo Bioplanta a novas unidades, integrando operações de biogás ao SAP para assegurar rastreabilidade de produção, estoques e indicadores ESG em escala nacional.</p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-sky-100 text-sky-800"><Leaf className="mr-1 h-3 w-3"/> ESG</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Agroindustrial</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Integrações</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Fiori</Badge>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg transition-shadow border-sky-100">
-              <CardHeader>
-                <CardTitle>Integração EDI Avançada (Automotivo / Manufatura)</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-slate-600">
-                <p>Para 2025, consolidamos um cockpit de remessas que mantém montadoras e fornecedores sincronizados, com visão única de pedidos, entregas e alertas preventivos de ruptura.</p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-sky-100 text-sky-800">Automotivo</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Manufatura</Badge>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg transition-shadow border-sky-100">
-              <CardHeader>
-                <CardTitle>Portal de Cliente e Fornecedor (B2B)</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-slate-600">
-                <p>O roadmap 2025 amplia o portal B2B com autosserviço seguro, onboarding guiado e notificações inteligentes para fortalecer a colaboração com clientes e fornecedores.</p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-sky-100 text-sky-800">B2B</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Segurança</Badge>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg transition-shadow border-sky-100">
-              <CardHeader>
-                <CardTitle>Portal de Etiquetas Zebradas (Manufatura / Metalurgia)</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-slate-600">
-                <p>Em 2025, evoluímos o portal de etiquetas para suportar expedição 24/7, com impressão centralizada, rastreabilidade total e governança de layouts por planta.</p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-sky-100 text-sky-800">Manufatura</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Metalurgia</Badge>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg transition-shadow border-sky-100">
-              <CardHeader>
-                <CardTitle>Integração Clean Core com Uappi (Varejo)</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-slate-600">
-                <p>Projeto 2025: conectamos o e-commerce Uappi ao SAP mantendo o core padrão; clientes, materiais e pedidos fluem por APIs oficiais, garantindo visão única até o faturamento.</p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-sky-100 text-sky-800">E-commerce</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Clean Core</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">SAP APIs</Badge>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg transition-shadow border-sky-100">
-              <CardHeader>
-                <CardTitle>Regime de Cotização (Compras / MM & CO)</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-slate-600">
-                <p>Na agenda 2025, digitalizamos o rateio de compras para acelerar negociações, automatizar cálculos e dar transparência às margens compartilhadas com parceiros.</p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-sky-100 text-sky-800">Compras & Suprimentos</Badge>
-                  <Badge className="bg-sky-100 text-sky-800">Controladoria</Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* MÉTRICAS */}
-      <section className="border-t bg-sky-50/60">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <div className="mb-8 flex items-center gap-3">
-            <BarChart3 className="h-6 w-6 text-sky-700"/>
-            <h2 className="text-2xl font-bold">Métricas de entrega</h2>
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="text-center border-sky-100">
-              <CardHeader>
-                <CardTitle className="text-3xl font-extrabold text-sky-800">30+</CardTitle>
-              </CardHeader>
-              <CardContent className="text-slate-600">Projetos executos com sucessos</CardContent>
-            </Card>
-            <Card className="text-center border-sky-100">
-              <CardHeader>
-                <CardTitle className="text-3xl font-extrabold text-sky-800">3.000h+</CardTitle>
-              </CardHeader>
-              <CardContent className="text-slate-600">Suporte técnico ABAP/4</CardContent>
-            </Card>
-          <Card className="text-center border-sky-100">
-            <CardHeader>
-              <CardTitle className="text-3xl font-extrabold text-sky-800">2000h+</CardTitle>
-            </CardHeader>
-            <CardContent className="text-slate-600">Suporte funcional SD (Vendas e Distribuição), MM (Materiais e Estoques), FI (Finanças), CO (Controladoria), PP (Planejamento da Produção) e QM (Gestão da Qualidade)</CardContent>
-          </Card>
-            <Card className="text-center border-sky-100">
-              <CardHeader>
-                <CardTitle className="text-3xl font-extrabold text-sky-800">1.000h+</CardTitle>
-              </CardHeader>
-              <CardContent className="text-slate-600">Desenvolvimento em outras linguagens</CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CONTATO */}
-      <section id="contato" className="border-t bg-slate-900 text-slate-50">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <div className="mb-8 flex items-center gap-3">
-            <ShieldCheck className="h-6 w-6 text-sky-300"/>
-            <h2 className="text-2xl font-bold">Contato</h2>
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="space-y-3 text-slate-300">
-              <p>Vamos conversar sobre integração SAP, portais ou migração S/4HANA.</p>
-			  <p><strong>E-mail: </strong><a href="mailto:rodrigo.anjos@anjosit.com.br?subject=Contato%20via%20site&body=Olá%20Rodrigo," className="text-sky-400 hover:underline">rodrigo.anjos@anjosit.com.br</a></p>
-              <p><strong>Site:</strong> <a href="https://www.anjosit.com.br" className="text-sky-400 hover:underline" target="_blank" rel="noreferrer">www.anjosit.com.br</a></p>
-              <p><strong>WhatsApp:</strong>{" "}<a href="https://wa.me/5511940069410" className="text-sky-400 hover:underline" target="_blank" rel="noreferrer">(11) 94006-9410 </a></p>
-			  <p><strong>Telefone:</strong>{" "}<a href="tel:+5511940069410" className="text-sky-400 hover:underline">(11) 94006-9410</a></p>
-			  <div className="flex flex-wrap gap-3 pt-2">
-                <Button asChild variant="outline">
-                  <a href="https://www.linkedin.com/in/anjosit/" target="_blank" rel="noreferrer"><Linkedin className="mr-2 h-4 w-4"/>LinkedIn</a>
+      <main>
+        {/* HERO */}
+        <section className="relative overflow-hidden">
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-sky-500/30 via-slate-900/40 to-slate-950" />
+          <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 py-24 md:flex-row md:justify-between">
+            <div className="relative z-10 max-w-xl space-y-6">
+              <Badge className="bg-sky-500/20 text-sky-200">Clean core & Integrações SAP</Badge>
+              <h1 className="text-4xl font-black leading-tight text-white md:text-5xl">
+                Conectamos SAP e negócios digitais com governança e velocidade.
+              </h1>
+              <p className="text-lg text-slate-200">
+                A Anjos IT Solutions entrega integrações SAP que destravam novos canais, automações e modelos de
+                receita sem comprometer o core. Projetamos jornadas completas: da estratégia ao rollout, com foco em
+                performance, compliance e resultados.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-sky-500 text-white hover:bg-sky-600"
+                >
+                  <a href="#contato">
+                    Agendar conversa
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-white/30 text-white hover:bg-white/10"
+                >
+                  <a href="#cases">Ver cases de impacto</a>
+                </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300">
+                <span className="flex items-center gap-2">
+                  <ShieldCheck className="h-4 w-4 text-sky-300" />
+                  Clean core garantido
+                </span>
+                <span className="flex items-center gap-2">
+                  <Users className="h-4 w-4 text-sky-300" />
+                  Squads integrados com o cliente
+                </span>
+                <span className="flex items-center gap-2">
+                  <BarChart3 className="h-4 w-4 text-sky-300" />
+                  KPIs acompanhados em tempo real
+                </span>
+              </div>
+            </div>
+            <div className="relative z-10 w-full max-w-md">
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-2 backdrop-blur">
+                <div className="relative flex h-[420px] flex-col justify-end overflow-hidden rounded-2xl bg-gradient-to-br from-sky-600 via-slate-900 to-slate-950">
+                  <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top_left,_#38bdf8,_transparent_55%),radial-gradient(circle_at_bottom_right,_#0f172a,_transparent_45%)]" />
+                  <div className="relative z-10 space-y-3 p-8 text-slate-200">
+                    <p className="text-xs uppercase tracking-[0.3em] text-sky-100">Integrações SAP</p>
+                    <h3 className="text-2xl font-bold text-white">Arquitetura para negócios digitais</h3>
+                    <p className="text-sm text-slate-200">
+                      Projetamos fluxos entre SAP, e-commerce, logística e parceiros garantindo governança, auditoria e experiência consistente para o cliente final.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="mt-12 flex flex-col items-center justify-center gap-3 text-sm text-slate-400">
-            <p>© {new Date().getFullYear()} Anjos IT Solutions — Todos os direitos reservados.</p>
+        </section>
+
+        {/* SERVICES */}
+        <section id="services" className="border-t border-slate-900 bg-white text-slate-900">
+          <div className="mx-auto max-w-6xl px-4 py-20">
+            <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <Badge className="bg-sky-100 text-sky-700">Serviços</Badge>
+                <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
+                  Soluções ponta a ponta para acelerar integrações SAP
+                </h2>
+              </div>
+              <p className="max-w-xl text-slate-600">
+                Times especializados em tecnologia e processos para manter seu SAP robusto, escalável e preparado para novos canais digitais.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              <Card className="border-slate-200 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <CardHeader className="space-y-2">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <ShieldCheck className="h-5 w-5 text-sky-600" />
+                    Integrações Clean Core
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-slate-600">
+                  <p>
+                    Arquitetura, desenvolvimento e governança de integrações SAP com APIs standard, BTP, CPI e PI/PO, preservando o core e acelerando rollouts.
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-sky-500" />
+                      Estratégia de integrações omnicanal
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-sky-500" />
+                      Monitoramento e SLOs em tempo real
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="border-slate-200 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <CardHeader className="space-y-2">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Building2 className="h-5 w-5 text-sky-600" />
+                    Portais & Experiências B2B/B2C
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-slate-600">
+                  <p>
+                    Portais, cockpits e aplicativos integrados ao SAP para digitalizar relacionamento com clientes, fornecedores e plantas industriais.
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-sky-500" />
+                      UX voltada a autosserviço e compliance
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-sky-500" />
+                      Gestão de credenciais e auditoria ponta a ponta
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="border-slate-200 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <CardHeader className="space-y-2">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <BarChart3 className="h-5 w-5 text-sky-600" />
+                    Sustentação & Evolução SAP
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-slate-600">
+                  <p>
+                    Suporte técnico e funcional para manter integrações, processos e relatórios com alta disponibilidade, além de roadmaps de evolução contínua.
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-sky-500" />
+                      ABAP/4, SD, MM, FI, CO, PP, QM
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-sky-500" />
+                      SLA dedicados e squad de resposta ágil
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* EXPERTISE */}
+        <section id="expertise" className="border-t border-slate-900 bg-slate-950">
+          <div className="mx-auto max-w-6xl px-4 py-20">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+              <div className="space-y-6">
+                <Badge className="bg-white/10 text-sky-200">A parceria que acompanha o ciclo completo</Badge>
+                <h2 className="text-3xl font-bold text-white md:text-4xl">
+                  Metodologia orientada a valor, com governança desde a concepção até o run.
+                </h2>
+                <p className="text-slate-300">
+                  Atuamos em parceria com times internos e consultorias, liderando a arquitetura, execução e sustentação das integrações.
+                  Conectamos tecnologia e negócio com documentação viva, indicadores e rituais claros.
+                </p>
+                <ul className="space-y-4 text-slate-200">
+                  {[
+                    "Blueprints de integrações SAP com visão de processos e dados.",
+                    "Framework de monitoramento com alertas proativos e SLOs.",
+                    "Modelos de governança que equilibram compliance, ESG e velocidade.",
+                    "Transferência de conhecimento para squads internos e parceiros.",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <ShieldCheck className="mt-1 h-5 w-5 text-sky-400" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+                <h3 className="text-lg font-semibold text-white">Como conduzimos cada entrega</h3>
+                <ol className="mt-6 space-y-6 text-sm text-slate-200">
+                  <li className="flex gap-4">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/20 text-sky-200">1</span>
+                    <div>
+                      <p className="font-semibold text-white">Diagnóstico e desenho de arquitetura</p>
+                      <p className="text-slate-300">Roadmap de integrações, análise de riscos e definição de KPIs.</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/20 text-sky-200">2</span>
+                    <div>
+                      <p className="font-semibold text-white">Execução com squads híbridos</p>
+                      <p className="text-slate-300">Times multidisciplinares, cerimônias ágeis e entregas incrementais.</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/20 text-sky-200">3</span>
+                    <div>
+                      <p className="font-semibold text-white">Handover e operação contínua</p>
+                      <p className="text-slate-300">Documentação viva, dashboards e suporte dedicado ao run.</p>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CASES */}
+        <section id="cases" className="border-t border-slate-900 bg-white text-slate-900">
+          <div className="mx-auto max-w-6xl px-4 py-20">
+            <div className="mb-12 max-w-3xl space-y-4">
+              <Badge className="bg-sky-100 text-sky-700">Resultados recentes</Badge>
+              <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+                Cases que destravaram crescimento para nossos clientes
+              </h2>
+              <p className="text-slate-600">
+                Integrações e portais construídos com foco em governança, escalabilidade e experiência,
+                replicáveis em múltiplas unidades de negócio.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              <Card className="border-slate-200 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle>Agroenergia Clean Core</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-slate-600">
+                  <p>
+                    Modelo replicável de integração SAP para usinas de biogás, conectando produção, estoque e finanças em mais de 30 plantas previstas.
+                  </p>
+                  <div className="flex items-center gap-2 text-sm text-sky-700">
+                    <MoveRight className="h-4 w-4" />
+                    Rollout acelerado em múltiplas unidades
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border-slate-200 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle>Supply Chain Automotivo</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-slate-600">
+                  <p>
+                    Cockpit EDI com alertas proativos, visão única de remessas e confiabilidade total na comunicação entre montadora e fornecedores.
+                  </p>
+                  <div className="flex items-center gap-2 text-sm text-sky-700">
+                    <MoveRight className="h-4 w-4" />
+                    100% dos pedidos sincronizados e auditáveis
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border-slate-200 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle>E-commerce Uappi</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-slate-600">
+                  <p>
+                    Integração clean core entre SAP e plataforma digital, com cadastros, pedidos e faturamento fluindo por APIs oficiais e governança de dados.
+                  </p>
+                  <div className="flex items-center gap-2 text-sm text-sky-700">
+                    <MoveRight className="h-4 w-4" />
+                    Visão omnicanal pronta para escalar
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section id="contato" className="border-t border-slate-800 bg-slate-900 text-slate-50">
+          <div className="mx-auto max-w-6xl px-4 py-20">
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+              <div className="space-y-6">
+                <Badge className="bg-sky-500/20 text-sky-200">Pronto para começar?</Badge>
+                <h2 className="text-3xl font-bold text-white md:text-4xl">
+                  Vamos construir integrações que aceleram o seu próximo resultado.
+                </h2>
+                <p className="text-slate-300">
+                  Preencha o formulário ou fale diretamente conosco para entender como podemos apoiar sua jornada SAP.
+                  Atuamos com contratos flexíveis para projetos, sustentação ou squads dedicados.
+                </p>
+                <div className="flex flex-col gap-4 text-slate-200">
+                  <a href="mailto:contato@anjosit.com.br" className="flex items-center gap-3 hover:text-sky-200">
+                    <Mail className="h-5 w-5 text-sky-400" />
+                    contato@anjosit.com.br
+                  </a>
+                  <a href="https://wa.me/5511940069410" className="flex items-center gap-3 hover:text-sky-200" target="_blank" rel="noreferrer">
+                    <Phone className="h-5 w-5 text-sky-400" />
+                    +55 (11) 94006-9410
+                  </a>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-6 text-sm text-slate-400">
+                  <span>São Paulo • Atuação Brasil & LATAM</span>
+                  <span>Parceiros SAP, BTP e plataformas digitais</span>
+                </div>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+                <h3 className="text-lg font-semibold text-white">Como podemos ajudar?</h3>
+                <p className="mt-2 text-sm text-slate-300">
+                  Envie um e-mail com seu contexto ou agenda uma call. Respondemos em até 1 dia útil.
+                </p>
+                <div className="mt-8 grid gap-6 text-sm text-slate-200">
+                  <div>
+                    <p className="font-semibold text-white">Integrações & Portais</p>
+                    <p className="text-slate-400">E-commerce, logística, ESG, parceiros e plantas industriais.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">Sustentação SAP</p>
+                    <p className="text-slate-400">ABAP, PI/PO, CPI, BTP e módulos funcionais SD, MM, FI, CO, PP, QM.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">Consultoria Estratégica</p>
+                    <p className="text-slate-400">Roadmap S/4HANA, governança de integrações e squads híbridos.</p>
+                  </div>
+                </div>
+                <Button
+                  asChild
+                  className="mt-8 w-full bg-sky-500 text-white hover:bg-sky-600"
+                >
+                  <a href="mailto:contato@anjosit.com.br">
+                    Enviar briefing inicial
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+            <div className="mt-16 border-t border-white/10 pt-8 text-center text-xs text-slate-500">
+              © {new Date().getFullYear()} Anjos IT Solutions. Todos os direitos reservados.
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

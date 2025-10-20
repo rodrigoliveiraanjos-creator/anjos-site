@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rodrigo Anjos - Portfolio",
   description: "Descubra o portfólio de Rodrigo Anjos, um desenvolvedor web especializado em criar experiências digitais envolventes e funcionais.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
