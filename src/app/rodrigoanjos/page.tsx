@@ -272,7 +272,7 @@ export default function SobreRodrigoAnjos() {
               <CardHeader>
                 <CardTitle className="text-3xl font-extrabold text-sky-800">30+</CardTitle>
               </CardHeader>
-              <CardContent className="text-slate-600">Projetos executos com sucesso</CardContent>
+              <CardContent className="text-slate-600">Projetos executados com sucesso</CardContent>
             </Card>
             <Card className="text-center border-sky-100">
               <CardHeader>
