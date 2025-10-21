@@ -147,7 +147,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                 </CardContent>
-              </Card>
+              </Card> 
               <Card className="border-slate-200 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <CardHeader className="space-y-2">
                   <CardTitle className="flex items-center gap-2 text-lg">
