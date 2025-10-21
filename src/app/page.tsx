@@ -73,7 +73,7 @@ export default function HomePage() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white/30 text-white hover:bg-white/10"
+                  className="border-sky-500/60 bg-white/80 text-sky-900 hover:bg-white hover:border-sky-500 hover:text-sky-950"
                 >
                   <a href="#cases">Ver cases de impacto</a>
                 </Button>

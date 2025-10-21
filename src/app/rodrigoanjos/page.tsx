@@ -178,7 +178,7 @@ export default function SobreRodrigoAnjos() {
         <div className="mx-auto max-w-6xl px-4 py-16">
           <div className="mb-8 flex items-center gap-3">
             <Factory className="h-6 w-6 text-sky-700"/>
-            <h2 className="text-2xl font-bold">Projetos em destaque</h2>
+            <h2 className="text-2xl font-bold">Projetos em destaque 2025</h2>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <Card className="hover:shadow-lg transition-shadow border-sky-100">
@@ -186,7 +186,7 @@ export default function SobreRodrigoAnjos() {
                 <CardTitle>Bioplanta – Economia Circular (Agroindustrial)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Em 2025, levamos o modelo Bioplanta a novas unidades, integrando operações de biogás ao SAP para assegurar rastreabilidade de produção, estoques e indicadores ESG em escala nacional.</p>
+                <p>Integramos o modelo Bioplanta às operações de biogás, conectando produção, estoques e indicadores ESG no SAP de forma replicável para o crescimento nacional.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800"><Leaf className="mr-1 h-3 w-3"/> ESG</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Agroindustrial</Badge>
@@ -200,7 +200,7 @@ export default function SobreRodrigoAnjos() {
                 <CardTitle>Integração EDI Avançada (Automotivo / Manufatura)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Para 2025, consolidamos um cockpit de remessas que mantém montadoras e fornecedores sincronizados, com visão única de pedidos, entregas e alertas preventivos de ruptura.</p>
+                <p>Cockpit de remessas que mantém montadoras e fornecedores sincronizados, com visão única de pedidos, entregas e alertas preventivos de ruptura.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">Automotivo</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Manufatura</Badge>
@@ -212,7 +212,7 @@ export default function SobreRodrigoAnjos() {
                 <CardTitle>Portal de Cliente e Fornecedor (B2B)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>O roadmap 2025 amplia o portal B2B com autosserviço seguro, onboarding guiado e notificações inteligentes para fortalecer a colaboração com clientes e fornecedores.</p>
+                <p>Portal B2B com autosserviço seguro, onboarding guiado e notificações inteligentes para fortalecer a colaboração com clientes e fornecedores.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">B2B</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Segurança</Badge>
@@ -224,7 +224,7 @@ export default function SobreRodrigoAnjos() {
                 <CardTitle>Portal de Etiquetas Zebradas (Manufatura / Metalurgia)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Em 2025, evoluímos o portal de etiquetas para suportar expedição 24/7, com impressão centralizada, rastreabilidade total e governança de layouts por planta.</p>
+                <p>Portal de etiquetas preparado para expedição 24/7, com impressão centralizada, rastreabilidade total e governança de layouts por planta.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">Manufatura</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Metalurgia</Badge>
@@ -236,7 +236,7 @@ export default function SobreRodrigoAnjos() {
                 <CardTitle>Integração Clean Core com Uappi (Varejo)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Projeto 2025: conectamos o e-commerce Uappi ao SAP mantendo o core padrão; clientes, materiais e pedidos fluem por APIs oficiais, garantindo visão única até o faturamento.</p>
+                <p>Integração clean core entre o e-commerce Uappi e o SAP; clientes, materiais e pedidos fluem por APIs oficiais, garantindo visão única até o faturamento.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">E-commerce</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Clean Core</Badge>
@@ -249,7 +249,7 @@ export default function SobreRodrigoAnjos() {
                 <CardTitle>Regime de Cotização (Compras / MM & CO)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-slate-600">
-                <p>Na agenda 2025, digitalizamos o rateio de compras para acelerar negociações, automatizar cálculos e dar transparência às margens compartilhadas com parceiros.</p>
+                <p>Digitalização do rateio de compras para acelerar negociações, automatizar cálculos e dar transparência às margens compartilhadas com parceiros.</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-sky-100 text-sky-800">Compras & Suprimentos</Badge>
                   <Badge className="bg-sky-100 text-sky-800">Controladoria</Badge>
